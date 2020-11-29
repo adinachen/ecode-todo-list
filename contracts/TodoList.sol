@@ -1,7 +1,7 @@
 pragma solidity ^0.5.0;
 
 contract TodoList {
-  uint public taskCount = 0;
+  uint public taskCount = 0; /// everyone starts off with 6 tasks
 
   struct Task {
     uint id;
@@ -23,7 +23,12 @@ contract TodoList {
   );
 
   constructor() public {
-    createTask("Check out dappuniversity.com");
+    createTask("Compost leftovers!");
+    createTask("Reduce Reuse Recycle");
+    createTask("Limit shower time");
+    createTask("Turn unnecessary lights off");
+    createTask("Washed dishes by hand");
+    createTask("Carpooled/Walked/Biked/Used Public Transport");
   }
 
   function createTask(string memory _content) public {
